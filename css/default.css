@@ -23,7 +23,7 @@ body {
   font-family: var(--font-family);
   font-size: 20px;
   font-weight: 400;
-  color: #313131;
+  color: var(--text);
   background-color: #fff;
 }
 
@@ -75,7 +75,7 @@ iframe {
 }
 
 .container {
-  max-width: 1366px;
-  padding: 0 72px;
+  max-width: 1302px;
+  padding: 0 40px;
   margin: 0 auto;
 }
