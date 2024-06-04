@@ -16,6 +16,7 @@
     <meta name="theme-color" content="#ffffff" />
 
     <link href="css/style.css" rel="stylesheet" />
+    <script src="js/main.js" type="module"></script>
 
     <title>Клуб четырех коней</title>
   </head>
@@ -32,7 +33,7 @@
           <h1 class="hero__title">Превратите уездный город <span>в столицу </span><span>земного шара</span></h1>
 
           <p class="hero__description">
-            Оплатите взнос на&nbsp;телеграммы для организации Международного васюкинского турнира по&nbsp;шахматам
+            Оплатите взнос на&nbsp;телеграммы для&nbsp;организации Международного васюкинского турнира по&nbsp;шахматам
           </p>
 
           <div class="hero__links">
@@ -43,37 +44,36 @@
 
         <div class="hero__circle"></div>
 
-        <div class="hero__running-line">
-          <div class="hero__running-wrapper">
+        <div class="hero__running-line running-line">
+          <div class="hero__running-wrapper running-wrapper">
             <p>Дело помощи утопающим — дело рук самих утопающих!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Лед тронулся, господа присяжные заседатели!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Дело помощи утопающим — дело рук самих утопающих!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Лед тронулся, господа присяжные заседатели!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Дело помощи утопающим — дело рук самих утопающих!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Лед тронулся, господа присяжные заседатели!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Дело помощи утопающим — дело рук самих утопающих!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
             <p>Лед тронулся, господа присяжные заседатели!</p>
-            <span class="hero__running-line-dot"></span>
+            <span class="hero__running-line-dot running-line-dot"></span>
           </div>
         </div>
 
         <div class="hero__horse"></div>
-        <div class="hero__pawn"></div>
       </section>
 
       <section class="about" id="about">
@@ -81,44 +81,44 @@
           <h2 class="visually-hidden">Поддержать шахматную мысль</h2>
 
           <div class="about__top">
-            <p class="about__description">
-              Чтобы поддержать Международный васюкинский турнир посетите лекцию на&nbsp;тему:
-              <span>&laquo;Плодотворная дебютная идея&raquo;</span>
+            <p class="about__description about__top-description">
+              Чтобы поддержать Международный васюкинский турнир
+              <span class="about__description-text">
+                посетите лекцию на&nbsp;тему:
+                <span class="about__description-text-red">&laquo;Плодотворная дебютная идея&raquo;</span>
+              </span>
             </p>
           </div>
 
           <div class="about__info">
             <p class="about__description about__info-description">
-              и&nbsp;Сеанс <span>одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span> гроссмейстера
-              О.&nbsp;Бендера
+              и&nbsp;Сеанс
+              <span class="about__description-text-red">одновременной игры в&nbsp;шахматы на&nbsp;160 досках</span>
+              гроссмейстера О.&nbsp;Бендера
             </p>
 
-            <table class="about__table">
-              <tr class="about__table-row">
-                <td class="about__table-field">Место проведения:</td>
-                <td class="about__table-value">Клуб «Картонажник»</td>
-              </tr>
-
-              <tr class="about__table-row">
-                <td class="about__table-field">Дата и время мероприятия:</td>
-                <td class="about__table-value">22 июня 1927 г. в 18:00</td>
-              </tr>
-
-              <tr class="about__table-row">
-                <td class="about__table-field">Стоимость входных билетов:</td>
-                <td class="about__table-value">20 коп.</td>
-              </tr>
-
-              <tr class="about__table-row">
-                <td class="about__table-field">Плата за игру:</td>
-                <td class="about__table-value">50 коп.</td>
-              </tr>
-
-              <tr class="about__table-row">
-                <td class="about__table-field">Взнос на телеграммы:</td>
-                <td class="about__table-value"><span>100 руб.</span> 21 руб. 16 коп.</td>
-              </tr>
-            </table>
+            <ul class="about__list">
+              <li class="about__item">
+                <p class="about__item-field">Место проведения:</p>
+                <p class="about__item-value">Клуб «Картонажник»</p>
+              </li>
+              <li class="about__item">
+                <p class="about__item-field">Дата и время мероприятия:</p>
+                <p class="about__item-value">22 июня 1927 г. в 18:00</p>
+              </li>
+              <li class="about__item">
+                <p class="about__item-field">Стоимость входных билетов:</p>
+                <p class="about__item-value">20 коп.</p>
+              </li>
+              <li class="about__item">
+                <p class="about__item-field">Плата за игру:</p>
+                <p class="about__item-value">50 коп.</p>
+              </li>
+              <li class="about__item">
+                <p class="about__item-field">Взнос на телеграммы:</p>
+                <p class="about__item-value"><span>100 руб.</span> 21 руб. 16 коп.</p>
+              </li>
+            </ul>
 
             <a class="about__info-link" href="#">
               По&nbsp;всем вопросам обращаться в&nbsp;администрацию к&nbsp;К.&nbsp;Михельсону
@@ -128,8 +128,204 @@
       </section>
 
       <section class="stages" id="stages">
-        <div class="container"></div>
+        <div class="container stages__container">
+          <h2 class="stages__title">Этапы преображения Васюков</h2>
+          <p class="stages__description">Будущие&nbsp;источники обогащения васюкинцев</p>
+
+          <div class="slider-wrapper">
+            <ul class="stages__slider slider"></ul>
+          </div>
+
+          <div class="slider-controller">
+            <button class="slider-button slider-button-prev">
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M8.07664 15.923L1.15357 8.9999L8.07664 2.07682"
+                  stroke="white"
+                  stroke-width="1.63636"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </button>
+
+            <ul class="slider-pagination"></ul>
+
+            <button class="slider-button slider-button-next">
+              <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.92336 2.0769L8.84644 8.99998L1.92336 15.9231"
+                  stroke="white"
+                  stroke-width="1.63636"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
+
+      <section class="participants">
+        <div class="container participants__container">
+          <h2 class="participants__title">Участники турнира</h2>
+
+          <div class="participants__wrapper">
+            <ul class="participants__list">
+              <li class="participants__item active">
+                <article class="participants__card">
+                  <figure class="participants__figure">
+                    <img class="participants__image" src="img/user.png" alt="" width="320" height="320" />
+                  </figure>
+
+                  <figcaption class="participants__name">Хозе-Рауль Капабланка</figcaption>
+
+                  <p class="participants__description">Чемпион мира по шахматам</p>
+
+                  <a class="participants__link" href="">Подробнее</a>
+                </article>
+              </li>
+
+              <li class="participants__item active">
+                <article class="participants__card">
+                  <figure class="participants__figure">
+                    <img class="participants__image" src="img/user.png" alt="" width="320" height="320" />
+                  </figure>
+
+                  <figcaption class="participants__name">Эммануил Ласкер</figcaption>
+
+                  <p class="participants__description">Чемпион мира по шахматам</p>
+
+                  <a class="participants__link" href="">Подробнее</a>
+                </article>
+              </li>
+
+              <li class="participants__item active">
+                <article class="participants__card">
+                  <figure class="participants__figure">
+                    <img class="participants__image" src="img/user.png" alt="" width="320" height="320" />
+                  </figure>
+
+                  <figcaption class="participants__name">Александр Алехин</figcaption>
+
+                  <p class="participants__description">Чемпион мира по шахматам</p>
+
+                  <a class="participants__link" href="">Подробнее</a>
+                </article>
+              </li>
+
+              <li class="participants__item">
+                <article class="participants__card">
+                  <figure class="participants__figure">
+                    <img class="participants__image" src="img/user.png" alt="" width="320" height="320" />
+                  </figure>
+
+                  <figcaption class="participants__name">Арон Нимцович</figcaption>
+
+                  <p class="participants__description">Чемпион мира по шахматам</p>
+
+                  <a class="participants__link" href="">Подробнее</a>
+                </article>
+              </li>
+
+              <li class="participants__item">
+                <article class="participants__card">
+                  <figure class="participants__figure">
+                    <img class="participants__image" src="img/user.png" alt="" width="320" height="320" />
+                  </figure>
+
+                  <figcaption class="participants__name">Рихард Рети</figcaption>
+
+                  <p class="participants__description">Чемпион мира по шахматам</p>
+
+                  <a class="participants__link" href="">Подробнее</a>
+                </article>
+              </li>
+
+              <li class="participants__item">
+                <article class="participants__card">
+                  <figure class="participants__figure">
+                    <img class="participants__image" src="img/user.png" alt="" width="320" height="320" />
+                  </figure>
+
+                  <figcaption class="participants__name">Остап Бендер</figcaption>
+
+                  <p class="participants__description">Гроссмейстер</p>
+
+                  <a class="participants__link" href="">Подробнее</a>
+                </article>
+              </li>
+            </ul>
+          </div>
+
+          <div class="participants__controller">
+            <button class="participants__button participants__button-prev">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.5382 18.4615L2.07666 9.99995L10.5382 1.53841"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </button>
+
+            <div class="participants__counter">
+              <span class="participants__count">1</span>
+              /
+              <span class="participants__total">6</span>
+            </div>
+
+            <button class="participants__button participants__button-next">
+              <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M1.4618 1.53839L9.92334 9.99993L1.4618 18.4615"
+                  stroke="white"
+                  stroke-width="2"
+                  stroke-linecap="square"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <div class="running-line">
+        <div class="running-wrapper">
+          <p>Дело помощи утопающим — дело рук самих утопающих!</p>
+          <span class="running-line-dot"></span>
+          <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
+          <span class="running-line-dot"></span>
+          <p>Лед тронулся, господа присяжные заседатели!</p>
+          <span class="running-line-dot"></span>
+          <p>Дело помощи утопающим — дело рук самих утопающих!</p>
+          <span class="running-line-dot"></span>
+          <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
+          <span class="running-line-dot"></span>
+          <p>Лед тронулся, господа присяжные заседатели!</p>
+          <span class="running-line-dot"></span>
+          <p>Дело помощи утопающим — дело рук самих утопающих!</p>
+          <span class="running-line-dot"></span>
+          <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
+          <span class="running-line-dot"></span>
+          <p>Лед тронулся, господа присяжные заседатели!</p>
+          <span class="running-line-dot"></span>
+          <p>Дело помощи утопающим — дело рук самих утопающих!</p>
+          <span class="running-line-dot"></span>
+          <p>Шахматы двигают вперед не только культуру, но и экономику!</p>
+          <span class="running-line-dot"></span>
+          <p>Лед тронулся, господа присяжные заседатели!</p>
+          <span class="running-line-dot"></span>
+        </div>
+      </div>
     </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="footer__description">
+          Все персонажи, события и&nbsp;цитаты являются вымышленными и&nbsp;не&nbsp;принадлежат создателям сайта.
+          С&nbsp;подробностями можно познакомиться в&nbsp;главе XXXIV романа Ильи Ильфа и&nbsp;Евгения Петрова
+          &laquo;Двенадцать стульев&raquo;.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

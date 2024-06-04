@@ -11,3 +11,14 @@
   width: 245px;
   height: 36px;
 }
+
+@media (max-width: 580px) {
+  .header {
+    padding: 18px 0;
+  }
+
+  .header__logo {
+    width: 213px;
+    height: 32px;
+  }
+}

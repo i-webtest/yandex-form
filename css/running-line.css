@@ -1,0 +1,51 @@
+.running-line {
+  overflow: hidden;
+  width: 100vw;
+  background-color: var(--red);
+  padding: 18px 0;
+}
+
+.running-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  color: #fff;
+  white-space: nowrap;
+  animation: runningLine 70s linear infinite;
+}
+
+.running-line-dot {
+  flex-shrink: 0;
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@media (max-width: 980px) {
+  .running-wrapper {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .running-line {
+    padding: 10px 0;
+  }
+
+  .running-wrapper {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 580px) {
+  .running-wrapper {
+    font-size: 16px;
+  }
+}

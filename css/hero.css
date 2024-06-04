@@ -12,6 +12,11 @@
   inset: 0;
   mix-blend-mode: color-burn;
   background-image: url('../img/hero-bg-fon.png');
+  background-image: image-set(
+    url('../img/hero-bg-fon.avif') type('image/avif'),
+    url('../img/hero-bg-fon.webp') type('image/webp'),
+    url('../img/hero-bg-fon.png') type('image/png')
+  );
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -22,6 +27,11 @@
   position: absolute;
   inset: 0;
   background-image: url('../img/city.png');
+  background-image: image-set(
+    url('../img/city.avif') type('image/avif'),
+    url('../img/city.webp') type('image/webp'),
+    url('../img/city.png') type('image/png')
+  );
   background-repeat: no-repeat;
   background-position: 46% 82%;
   background-size: auto;
@@ -32,14 +42,19 @@
   z-index: 10;
 }
 
-.hero__container::before {
+/* .hero__container::before {
   position: absolute;
   inset: 0;
   background-image: url('../img/horse.png');
+  background-image: image-set(
+    url('../img/horse.avif') type('image/avif'),
+    url('../img/horse.webp') type('image/webp'),
+    url('../img/horse.png') type('image/png')
+  );
   background-repeat: no-repeat;
   background-position: 10% 10%;
   transform: rotate(-11deg);
-}
+} */
 
 .hero__title {
   max-width: 542px;
@@ -81,6 +96,7 @@
   line-height: 1.3;
   text-align: center;
   border-radius: 66px;
+  transition: background-color 0.3s ease, color 0.3s ease;
   padding: 13px 49px;
 }
 
@@ -89,9 +105,19 @@
   background-color: #1f1f1f;
 }
 
+.hero__link-dark:hover {
+  color: #1f1f1f;
+  background-color: var(--yellow);
+}
+
 .hero__link-light {
   color: #1f1f1f;
   border: 2px solid #1f1f1f;
+}
+
+.hero__link-light:hover {
+  color: #fff;
+  background-color: #1f1f1f;
 }
 
 .hero__circle {
@@ -121,15 +147,11 @@
 
 .hero__running-line {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   bottom: -130px;
-  overflow: hidden;
-  width: 100vw;
-  background-color: var(--red);
-  padding: 18px 0;
 }
 
-.hero__running-wrapper {
+/* .hero__running-wrapper {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -150,7 +172,7 @@
   height: 6px;
   background-color: #fff;
   border-radius: 50%;
-}
+} */
 
 .hero__horse {
   position: absolute;
@@ -166,6 +188,11 @@
   width: 197px;
   height: 243px;
   background-image: url('../img/horse.png');
+  background-image: image-set(
+    url('../img/horse.avif') type('image/avif'),
+    url('../img/horse.webp') type('image/webp'),
+    url('../img/horse.png') type('image/png')
+  );
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -175,6 +202,11 @@
   position: absolute;
   inset: 0;
   background-image: url('../img/pawn.png');
+  background-image: image-set(
+    url('../img/pawn.avif') type('image/avif'),
+    url('../img/pawn.webp') type('image/webp'),
+    url('../img/pawn.png') type('image/png')
+  );
   background-repeat: no-repeat;
   background-position: left 90.6vw bottom 80px;
 }
@@ -195,4 +227,199 @@
 }
 
 @media (max-width: 1200px) {
+  .hero__title {
+    max-width: 460px;
+    font-size: 48px;
+  }
+
+  .hero__description {
+    max-width: 490px;
+  }
+
+  .hero__link {
+    max-width: 230px;
+    padding: 13px 40px;
+  }
+
+  .hero__horse::before {
+    bottom: 35px;
+  }
+}
+
+@media (max-width: 980px) {
+  .hero {
+    padding-bottom: 110px;
+  }
+
+  .hero::after {
+    background-size: 1070px;
+    background-position: 46% 88%;
+  }
+
+  .hero__title {
+    max-width: 390px;
+    font-size: 42px;
+  }
+
+  .hero__description {
+    max-width: 340px;
+    text-align: left;
+  }
+
+  .hero__links {
+    flex-direction: column;
+    align-items: start;
+    max-width: 335px;
+  }
+
+  .hero__link {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .hero__circle {
+    top: 160px;
+    width: 500px;
+    height: 500px;
+  }
+
+  .hero__circle::after {
+    background-size: 584px;
+  }
+
+  .hero__horse::before {
+    bottom: 55px;
+    width: 160px;
+    height: 180px;
+  }
+
+  .hero__horse::after {
+    background-size: 60px;
+    background-position: left 88vw bottom 69px;
+  }
+
+  .hero__running-line {
+    bottom: -110px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 91px;
+    padding-bottom: 100px;
+  }
+
+  .hero:after {
+    background-size: 840px;
+    background-position: 46% 96%;
+  }
+
+  .hero__title {
+    max-width: 335px;
+    font-size: 36px;
+  }
+
+  .hero__title span:first-child {
+    padding-left: 8px;
+  }
+
+  .hero__title span:last-child {
+    padding-left: 30px;
+  }
+
+  .hero__description {
+    margin-bottom: 31px;
+  }
+
+  .hero__links {
+    gap: 15px;
+  }
+
+  .hero__link-light {
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+  }
+
+  .hero__circle {
+    top: 260px;
+    width: 340px;
+    height: 340px;
+  }
+
+  .hero__circle::after {
+    width: 394px;
+    height: 394px;
+    background-size: cover;
+  }
+
+  .hero__horse::after {
+    display: none;
+  }
+
+  .hero__horse::before {
+    bottom: 30px;
+    width: 76px;
+    height: 84px;
+  }
+}
+
+@media (max-width: 580px) {
+  .hero {
+    padding-bottom: 290px;
+  }
+
+  .hero:after {
+    /* background-image: url('../img/city-mobile.png'); */
+    /* background-size: contain; */
+    background-position: center 498px;
+  }
+
+  .hero__circle {
+    top: 410px;
+    left: 48vw;
+    width: 298px;
+    height: 298px;
+  }
+
+  .hero__circle::after {
+    width: 355px;
+    height: 355px;
+  }
+
+  .hero__horse::before {
+    left: 65vw;
+    bottom: 17px;
+    width: 97px;
+    height: 133px;
+    background-image: url('../img/horse-mobile.png');
+    background-image: image-set(
+      url('../img/horse-mobile.avif') type('image/avif'),
+      url('../img/horse-mobile.webp') type('image/webp'),
+      url('../img/horse-mobile.png') type('image/png')
+    );
+  }
+
+  .hero__running-line {
+    bottom: -291px;
+  }
+}
+
+@media (max-width: 375px) {
+  .hero:after {
+    background-image: url('../img/city-mobile.png');
+    background-image: image-set(
+      url('../img/city-mobile.avif') type('image/avif'),
+      url('../img/city-mobile.webp') type('image/webp'),
+      url('../img/city-mobile.png') type('image/png')
+    );
+    background-size: contain;
+  }
+
+  .hero__circle {
+    left: 8vw;
+  }
+
+  .hero__horse::before {
+    left: 39vw;
+  }
 }

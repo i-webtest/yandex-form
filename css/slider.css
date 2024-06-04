@@ -1,0 +1,262 @@
+.slider-wrapper {
+  position: relative;
+}
+
+.slider-wrapper::after {
+  content: '';
+  position: absolute;
+  right: -63px;
+  bottom: -2px;
+  width: 401px;
+  height: 235px;
+  background-image: url('../img/air-plane.png');
+  background-image: image-set(
+    url('../img/air-plane.avif') type('image/avif'),
+    url('../img/air-plane.webp') type('image/webp'),
+    url('../img/air-plane.png') type('image/png')
+  );
+  background-repeat: no-repeat;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    'one two three'
+    'four five three'
+    'six seven seven';
+  gap: 20px;
+  counter-reset: count 0;
+}
+
+.slider__slide.active {
+  opacity: 1;
+}
+
+.slider__slide:nth-child(1) {
+  grid-area: one;
+}
+
+.slider__slide:nth-child(2) {
+  grid-area: two;
+}
+
+.slider__slide:nth-child(3) {
+  grid-area: three;
+}
+
+.slider__slide:nth-child(4) {
+  grid-area: four;
+}
+
+.slider__slide:nth-child(5) {
+  grid-area: five;
+}
+
+.slider__slide:nth-child(6) {
+  grid-area: six;
+}
+
+.slider__slide:nth-child(7) {
+  grid-area: seven;
+}
+
+.slider__card {
+  flex-grow: 1;
+  position: relative;
+  height: 100%;
+  padding: 20px;
+}
+
+.slider__card::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url('../img/slider-bg-before.png');
+  background-image: image-set(
+    url('../img/slider-bg-before.avif') type('image/avif'),
+    url('../img/slider-bg-before.webp') type('image/webp'),
+    url('../img/slider-bg-before.png') type('image/png')
+  );
+  background-repeat: no-repeat;
+  mix-blend-mode: color-burn;
+}
+
+.slider__card::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background-image: url('../img/slider-bg-after.png');
+  background-image: image-set(
+    url('../img/slider-bg-after.avif') type('image/avif'),
+    url('../img/slider-bg-after.webp') type('image/webp'),
+    url('../img/slider-bg-after.png') type('image/png')
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.slider__card-description {
+  position: relative;
+  font-weight: 500;
+  line-height: 1.2;
+  padding-left: 52px;
+}
+
+.slider__card-description::before {
+  content: counter(count);
+  counter-increment: count;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  font-weight: 600;
+  line-height: 1.2;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.slider__slide:nth-child(4) .slider__card-description,
+.slider__slide:nth-child(5) .slider__card-description {
+  max-width: 302px;
+}
+
+.slider__slide:nth-child(7) .slider__card-description {
+  max-width: 470px;
+}
+
+/* slider controller */
+
+.slider-controller {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.slider-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--text);
+  border-radius: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.slider-button:hover {
+  background-color: var(--yellow);
+}
+
+.slider-button:disabled {
+  background-color: #d6d6d6;
+  cursor: not-allowed;
+}
+
+.slider-pagination {
+  display: flex;
+  gap: 6px;
+}
+
+.slider-pagination__dot {
+  width: 10px;
+  height: 10px;
+  background-color: #d6d6d6;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.slider-pagination__dot:hover {
+  background-color: var(--yellow);
+}
+
+.slider-pagination__dot.active {
+  background-color: var(--text);
+}
+
+@media (max-width: 1200px) {
+  .slider-wrapper::after {
+    top: -190px;
+    bottom: unset;
+  }
+}
+
+@media (max-width: 980px) {
+  .slider-wrapper::after {
+    right: unset;
+    left: 0;
+  }
+
+  .slider {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      'one two '
+      'three four'
+      'five six'
+      'seven seven';
+  }
+
+  .slider__slide:nth-child(7) .slider__card-description {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    max-width: 500px;
+    height: 300px;
+    margin: 0 auto 28px;
+  }
+
+  .slider-wrapper::after {
+    top: -128px;
+    background-image: url('../img/air-plane-mobile.png');
+    background-image: image-set(
+      url('../img/air-plane-mobile.avif') type('image/avif'),
+      url('../img/air-plane-mobile.webp') type('image/webp'),
+      url('../img/air-plane-mobile.png') type('image/png')
+    );
+  }
+
+  .slider {
+    position: relative;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  .slider__slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  .slider__card {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 63px 20px 20px;
+  }
+
+  .slider__card-description {
+    font-size: 18px;
+  }
+
+  .slider-controller {
+    display: flex;
+  }
+}
