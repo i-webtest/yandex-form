@@ -1,11 +1,13 @@
+'use strict';
+
 export const carousel = () => {
   const slider = document.querySelector('.participants__list');
   const slides = document.querySelectorAll('.participants__item');
   const controller = document.querySelector('.participants__controller');
-  const nextBtn = document.querySelector('.participants__button-next');
-  const prevBtn = document.querySelector('.participants__button-prev');
   const count = document.querySelector('.participants__count');
   const total = document.querySelector('.participants__total');
+
+  total.textContent = slides.length;
 
   const timeInterval = 4000;
   let slideLength = 4;
@@ -111,6 +113,4 @@ export const carousel = () => {
   document.addEventListener('DOMContentLoaded', () => {
     startSlide(timeInterval);
   });
-
-  // startSlide(timeInterval);
 };

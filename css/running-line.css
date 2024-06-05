@@ -16,7 +16,7 @@
   text-transform: uppercase;
   color: #fff;
   white-space: nowrap;
-  animation: runningLine 70s linear infinite;
+  animation: runningLine 50s linear infinite;
 }
 
 .running-line-dot {
